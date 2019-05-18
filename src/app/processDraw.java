@@ -36,7 +36,7 @@ class processDraw extends JPanel {
     public int width ;
     char name ;
     public processDraw (int w , char s){ 
-        width = w*10 ;
+        width = 20 ; //because drawing 1 second slices so width is constant
         name=s ;
         this.add(new JLabel(String.valueOf(name)) ) ;
 
@@ -56,7 +56,7 @@ class processDraw extends JPanel {
 
         @Override
     public Dimension getPreferredSize() {
-        return new Dimension(width,100);
+        return new Dimension(width,100); //because drawing 1 second slices so width is constant
     }
 
 

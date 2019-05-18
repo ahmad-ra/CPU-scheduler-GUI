@@ -50,7 +50,7 @@ myBox.add(title);
 
 
 JScrollPane chartScroll = new JScrollPane(new canvas(),JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED) ;
-chartScroll.getViewport().setPreferredSize(new Dimension(400, 200));
+chartScroll.getViewport().setPreferredSize(new Dimension(400, 100));
 myBox.add(chartScroll);
 
 

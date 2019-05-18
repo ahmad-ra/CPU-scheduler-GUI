@@ -32,18 +32,61 @@ import java.awt.Shape;
 
 class canvas extends JPanel{
 
-   
+    shared a = shared.getInstance();
 
     public canvas(){
-       shared a = shared.getInstance();
+    start();
+    }
 
-        for (int i =0 ; i<a.lengths.length ;i++ ){
 
-            this.add(new processDraw(a.lengths[i], a.names[i]) ) ;
+    public void start(){
+
+     
+        for (int i =0 ; i<a.gant.size() ;i++ ){
+
+            this.add(new processDraw(a.gant.get(i).burst, a.gant.get(i).name) ) ;
+           
         }
+
+    }
+
+   
+
+    
+    // @Override
+    // public Dimension getPreferredSize() {
+    //     return new Dimension(50,50);
+    // }
+
+    
+    //  @Override public Dimension   getMaximumSize(){
+    //     return new Dimension(50,50);
+    //  }
+
+
+    public void paintComponent(Graphics g) {
+      
+        this.removeAll();
+        super.paintComponent(g);
+       start();
+       this.validate();
+    }
+  
+    
+
+
+       
+
     }
 
 
 
-}
+
+
+
+
+      
+
+
+
 
